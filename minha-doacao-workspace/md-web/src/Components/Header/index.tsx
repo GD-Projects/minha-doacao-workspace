@@ -9,17 +9,25 @@ function Header() {
   return (
 
     <s.Container>
-      <Navbar bg="light" expand="md">
+      <Navbar id="n" bg="light" expand="md">
         <Container>
           <img id="logo" src={logo} alt="Logo Minha Doação" />
-          <Navbar.Brand href="#home">Minha Doação</Navbar.Brand>
+          <Navbar.Brand href="#home">
+            <s.NavBar>
+              <p>
+                Minha
+                <br />
+                Doação
+              </p>
+            </s.NavBar>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link id="whoWeAre" href="#home">Quem Somos</Nav.Link>
+              <Nav.Link id="news" href="#home">Quem Somos</Nav.Link>
               <Nav.Link id="news" href="#home">Notícias</Nav.Link>
-              <Nav.Link id="doubt" href="#home">Dúvidas</Nav.Link>
-              <Nav.Link id="donations" href="#link">Recebo doações</Nav.Link>
+              <Nav.Link id="news" href="#home">Dúvidas</Nav.Link>
+              <Nav.Link id="news" href="#link">Recebo doações</Nav.Link>
               <s.ButtonQD>
                 <Button id="iDonate" variant="outline-warning">Quero Doar</Button>
                 {' '}

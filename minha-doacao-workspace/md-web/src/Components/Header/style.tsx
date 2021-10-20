@@ -1,12 +1,18 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    
+#n {
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.33);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.33);
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.33);
+    height: 55px;
+    }
 #logo { 
-    max-width: 60px;
-    max-height: 60px;
+    max-width: 62px;
+    max-height: 62px;
     width: auto;
-    height: auto;  
+    height: auto;
+    position: relative;
     
     }
 #icne { 
@@ -16,24 +22,11 @@ export const Container = styled.div`
     height: auto;  
     
     }
-#whoWeAre {
-    padding-left: 150px;
-    padding-right: 35px;
-    color: #020241;
-} 
 #news {
     padding-right: 35px;
     color: #020241;
 } 
-#doubt {
-    padding-right: 35px;
-    color: #020241;
-} 
-#donations {
-    padding-right: 35px;
-    color: #020241;
-} `;
-
+`;
 export const ButtonQD = styled.div`
 #iDonate { 
     border-radius: 30px 30px 30px 30px; 
@@ -41,3 +34,12 @@ export const ButtonQD = styled.div`
     padding-right: 40px;
     
     }`;
+
+export const NavBar = styled.p`
+    color: #020241;
+    font-size: 13pt;
+    line-height: 16px;    
+    margin-bottom: -15px;
+    padding-right: 170px;
+    
+`;
