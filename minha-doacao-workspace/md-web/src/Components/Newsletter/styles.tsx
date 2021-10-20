@@ -19,6 +19,9 @@ background-size:contain;
 @media(max-width: 440px) {
     background-position: 135%;
 }
+@media(min-height: 830px) {
+    height:18vh;
+}
 `;
 
 export const NewsletterItensContainer = styled.div`
