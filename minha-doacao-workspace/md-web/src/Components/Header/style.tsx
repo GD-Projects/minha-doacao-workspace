@@ -1,26 +1,43 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-#bt { 
-    border-radius: 30px 30px 30px 30px; 
-    padding-left: 50px;
-    padding-right: 50px;
+    
+#logo { 
+    max-width: 60px;
+    max-height: 60px;
+    width: auto;
+    height: auto;  
     
     }
-#quemSomos {
+#icne { 
+    max-width: 30px;
+    max-height: 30px;
+    width: auto;
+    height: auto;  
+    
+    }
+#whoWeAre {
     padding-left: 150px;
     padding-right: 35px;
     color: #020241;
 } 
-#noticias {
+#news {
     padding-right: 35px;
     color: #020241;
 } 
-#duvidas {
+#doubt {
     padding-right: 35px;
-   color: #020241;
+    color: #020241;
 } 
-#receboDoacoes {
+#donations {
     padding-right: 35px;
-   color: #020241;
+    color: #020241;
 } `;
+
+export const ButtonQD = styled.div`
+#iDonate { 
+    border-radius: 30px 30px 30px 30px; 
+    padding-left: 40px;
+    padding-right: 40px;
+    
+    }`;
