@@ -14,13 +14,16 @@ background-position: right;
 background-size:contain;
 @media(max-width: 650px) {
     background-image: url(${logo2Mobile});
-    background-position: 115%;
+    background-position: 105%;
 }
 @media(max-width: 440px) {
-    background-position: 135%;
+    background-position: 115%;
 }
 @media(min-height: 830px) {
     height:18vh;
+}
+@media (max-width: 700px) {
+    height:30vh;
 }
 `;
 
