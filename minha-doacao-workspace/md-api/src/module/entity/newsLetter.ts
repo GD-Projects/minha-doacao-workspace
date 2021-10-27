@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('NewsLetter')
-class NewsLatter {
+class NewsLetter {
 
     @PrimaryGeneratedColumn()
     id: number;
@@ -9,4 +9,4 @@ class NewsLatter {
     @Column({ nullable: true })
     email: string;   
 }
-export default NewsLatter;
+export default NewsLetter;
