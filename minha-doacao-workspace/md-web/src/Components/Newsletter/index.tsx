@@ -6,8 +6,6 @@ import * as S from './styles';
 function Newsletter() {
   const [email, setEmail] = useState('');
 
-  function test() { console.log(email); }
-
   return (
     <S.Container>
       <S.NewsletterItensContainer>
