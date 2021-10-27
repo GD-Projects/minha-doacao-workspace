@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import Newsletter from './Components/Newsletter';
 
 function App() {
+  console.log(process.env.MYSQL_USER);
   return (
     <div className="App">
       <Header />

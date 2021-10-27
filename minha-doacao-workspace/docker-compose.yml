@@ -54,6 +54,9 @@ services:
     working_dir: ${WORKING_DIR}
     volumes:
       - ./md-web:${WORKING_DIR}
+    environment:
+      API_ADDRESS: ${API_ADDRESS}
+      MYSQL_USER: ${MYSQL_USER}
     depends_on:
       - db
       - api
