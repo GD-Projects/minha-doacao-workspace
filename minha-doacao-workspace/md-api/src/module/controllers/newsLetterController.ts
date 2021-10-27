@@ -2,18 +2,23 @@ import { Request, Response } from "express";
 import NewsLatter from "../entity/newsLetter";
 import EmailController from "./emailController"
 import { getRepository } from "typeorm";
+import { validate } from 'class-validator';
 
 class NewsLetterController {
     async store(req: Request, res: Response){
         // Criação de um registro na Tabela Newslatter
         const repository = getRepository(NewsLatter);
-        const emailAddress = req.body;
-        const createNewsLetter = repository.create(emailAddress);
-        await repository.save(createNewsLetter);
-        
+        const {email} = req.body;
+        const createNewsLetter = repository.create({email});
+
+        // Validação da requisição
+        const validation = await validate(createNewsLetter);        
+        if (validation.length === 0){
+            await repository.save(createNewsLetter);
+                 
         // Envio de e-mail de boas vindas
         const NewslatterMesage = {
-            to: emailAddress.email,
+            to: email,
             from: process.env.FROM_EMAIL,
             subject: 'Bem vindo a Minha Doação!',
             text: 'Seja muito bem vindo a Minha Doação!!',
@@ -22,6 +27,7 @@ class NewsLetterController {
         await EmailController.sendEmail(NewslatterMesage);
         
         return res.json(createNewsLetter);        
-    }
+    } res.status(400).json(validation)};
  }
+
 export default new NewsLetterController();
