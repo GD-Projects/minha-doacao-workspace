@@ -13,4 +13,5 @@ app.get('/teste', (req,res)=>{
     res.json('Olá Mundo, sejam bem vindos ao Minha Doação!!')
 })
 
-app.listen(8080, () => console.log('Hello Galinha da Agua!'));
+app.listen(process.env.PORT || 8080
+    , () => console.log('Hello Galinha da Agua!'));
